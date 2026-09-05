@@ -19,7 +19,7 @@ No se suben claves, tokens ni credenciales. Todo eso va en variables de entorno 
 
 ## Identidad de marca
 
-Sistema "SOFICO · Estudio Notable", aprobado por el cliente.
+Sistema "SOFICO · Estudio Contable", aprobado por el cliente.
 
 | Token | Valor |
 |---|---|
@@ -32,14 +32,22 @@ Archivos en `marca/`:
 
 | Archivo | Uso |
 |---|---|
-| `sofico-isotipo.svg` | Isotipo a color con degradados. Uso general en web. |
-| `sofico-isotipo-mono.svg` | Isotipo de una sola tinta. Toma el color del contexto con `currentColor`: blanco sobre marino, marino sobre claro. |
-| `sofico-isotipo-1024.png` | Fondo transparente. Para redes y usos que no aceptan SVG. |
-| `sofico-isotipo-512.png` | Fondo transparente. Para favicon y miniaturas. |
+| `sofico-isotipo-grande.png` | 899 × 1676 con transparencia. Versión principal a color, para el hero y usos grandes. |
+| `sofico-isotipo-512.png` | Redes y compartidos. |
+| `sofico-isotipo-256.png` | Cabecera del sitio. |
+| `sofico-isotipo-128.png` | Favicon. |
 
-El cliente no conserva el archivo original del logo. El isotipo se reconstruyó en vector
-trazando la mitad naranja de la lámina de marca y rotándola 180 grados para generar la azul,
-que es la construcción real del símbolo. Si aparece el original, se reemplaza.
+
+Nota sobre la bajada de marca: la lámina generada por IA muestra "ESTUDIO NOTABLE". Es un error de
+la propia generación de imagen (los generadores deforman el texto). La bajada correcta es
+**ESTUDIO CONTABLE**, confirmada por el cliente. Conviene revisar que ese error no se haya
+propagado a otros materiales de la marca.
+
+El cliente no conserva el archivo original vectorial del logo. Estos PNG se derivaron del render
+en alta de la marca, recortando el fondo con transparencia real. Se intentó revectorizar el isotipo
+y el resultado no alcanzó la calidad del render (el pliegue de la cinta se deforma), así que esa vía
+quedó descartada y los intentos están en `marca/_descartado/`. Si el cliente consigue el archivo
+vectorial de quien armó la marca, reemplaza a estos PNG y conviene hacerlo.
 
 ## Contenido y datos reales del negocio
 
