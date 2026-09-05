@@ -8,23 +8,6 @@
     "entrada": "100",
     "plazo": "15 días hábiles"
   },
-  "incluye": {
-    "eyebrow": "Sin costos ocultos",
-    "titulo": "Todo esto ya está dentro de los S/600",
-    "bajada": "Registrales, notariales y RENIEC no se cobran aparte. Tampoco la subsanación.",
-    "items": [
-      "Asesoría para elegir: SAC, EIRL o SRL",
-      "Reserva de nombre en SUNARP",
-      "Minuta y escritura pública",
-      "Derechos RENIEC y biométrica",
-      "Derechos notariales e inscripción",
-      "Subsanación cubierta si hay observación",
-      "Entrega de tus documentos",
-      "Trámite del RUC y la Clave SOL"
-    ],
-    "bonoTitulo": "Incluido sin costo adicional",
-    "bonoTexto": "Kit de inicio y soporte por WhatsApp los primeros 30 días."
-  },
   "proceso": {
     "titulo": "Cómo avanza tu trámite",
     "bajada": "De la primera conversación a tu RUC",
@@ -50,6 +33,23 @@
         "texto": "Con tu RUC y tu Clave SOL. Ya facturas."
       }
     ]
+  },
+  "incluye": {
+    "eyebrow": "Sin costos ocultos",
+    "titulo": "Todo esto ya está dentro de los S/600",
+    "bajada": "Registrales, notariales y RENIEC no se cobran aparte. Tampoco la subsanación.",
+    "items": [
+      "Asesoría para elegir: SAC, EIRL o SRL",
+      "Reserva de nombre en SUNARP",
+      "Minuta y escritura pública",
+      "Derechos RENIEC y biométrica",
+      "Derechos notariales e inscripción",
+      "Subsanación cubierta si hay observación",
+      "Entrega de tus documentos",
+      "Trámite del RUC y la Clave SOL"
+    ],
+    "bonoTitulo": "Incluido sin costo adicional",
+    "bonoTexto": "Kit de inicio y soporte por WhatsApp los primeros 30 días."
   },
   "razones": {
     "eyebrow": "Por qué con nosotros",
@@ -111,7 +111,7 @@
     "whatsapp": "51913926338",
     "mensaje": "Hola SOFICO, quiero constituir mi empresa. Los vi en su página web.",
     "correo": "informes@estudiosofico.com",
-    "nota": "Atención por WhatsApp",
+    "nota": "Atención por WhatsApp, de lunes a sábado",
     "redes": [
       {
         "t": "Facebook",
