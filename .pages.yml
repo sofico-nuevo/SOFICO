@@ -9,6 +9,7 @@ content:
     label: Contenido de la web
     path: src/data/home.json
     type: file
+    format: json
     fields:
       - name: oferta
         label: Portada
