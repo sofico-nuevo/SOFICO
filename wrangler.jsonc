@@ -1,0 +1,12 @@
+{
+  // Cómo se publica la web de SOFICO en Cloudflare.
+  // Es un sitio estático: no corre código en el servidor, solo sirve lo que
+  // Astro deja en ./dist. El build es `npm run build` y el deploy `npx wrangler deploy`.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sofico",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
