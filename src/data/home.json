@@ -1,0 +1,131 @@
+{
+  "oferta": {
+    "eyebrow": "Constitución de empresas",
+    "titulo": "Tu empresa formal, lista para",
+    "tituloDestacado": "facturar",
+    "promesa": "Nos encargamos de todo el trámite. Tú solo nos escribes.",
+    "precio": "600",
+    "entrada": "100",
+    "plazo": "15 días hábiles"
+  },
+  "incluye": {
+    "eyebrow": "Sin costos ocultos",
+    "titulo": "Todo esto ya está dentro de los S/600",
+    "bajada": "Registrales, notariales y RENIEC no se cobran aparte. Tampoco la subsanación.",
+    "items": [
+      "Asesoría para elegir: SAC, EIRL o SRL",
+      "Reserva de nombre en SUNARP",
+      "Minuta y escritura pública",
+      "Derechos RENIEC y biométrica",
+      "Derechos notariales e inscripción",
+      "Subsanación cubierta si hay observación",
+      "Entrega de tus documentos",
+      "Trámite del RUC y la Clave SOL"
+    ],
+    "bonoTitulo": "Incluido sin costo adicional",
+    "bonoTexto": "Kit de inicio y soporte por WhatsApp los primeros 30 días."
+  },
+  "proceso": {
+    "titulo": "Cómo avanza tu trámite",
+    "bajada": "De la primera conversación a tu RUC",
+    "pasos": [
+      {
+        "dia": "Día 0",
+        "titulo": "Nos escribes por WhatsApp",
+        "texto": "Resolvemos tus dudas antes de que pagues nada."
+      },
+      {
+        "dia": "Día 1",
+        "titulo": "Definimos tu tipo de empresa",
+        "texto": "SAC, EIRL o SRL, según cómo vas a operar."
+      },
+      {
+        "dia": "Día 2",
+        "titulo": "Inicias con S/100",
+        "texto": "Reservamos tu nombre en SUNARP."
+      },
+      {
+        "dia": "Día 15",
+        "titulo": "Empresa lista para operar",
+        "texto": "Con tu RUC y tu Clave SOL. Ya facturas."
+      }
+    ]
+  },
+  "razones": {
+    "eyebrow": "Por qué con nosotros",
+    "titulo": "Todo el peso del trámite lo llevamos nosotros",
+    "bajada": "Tú escribes y eliges el tipo de empresa. Las colas y las observaciones corren por nuestra cuenta.",
+    "tarjetas": [
+      {
+        "titulo": "Todo incluido",
+        "texto": "El precio que ves es el que pagas."
+      },
+      {
+        "titulo": "Te acompañamos",
+        "texto": "Una persona lleva tu caso. No un formulario."
+      },
+      {
+        "titulo": "Rápido y seguro",
+        "texto": "Quince días hábiles como máximo."
+      },
+      {
+        "titulo": "Ocho años haciéndolo",
+        "texto": "Conocemos las observaciones y cómo resolverlas."
+      }
+    ]
+  },
+  "cifras": [
+    {
+      "numero": "+3,500",
+      "texto": "empresas constituidas"
+    },
+    {
+      "numero": "+4,000",
+      "texto": "emprendedores asesorados"
+    },
+    {
+      "numero": "+8",
+      "texto": "años en el mercado peruano"
+    }
+  ],
+  "nosotros": {
+    "eyebrow": "Quiénes somos",
+    "titulo": "Ocho años formalizando emprendedores peruanos",
+    "texto": "Ocho años en el mercado peruano constituyendo empresas y llevando la contabilidad de emprendedores.",
+    "mision": "Impulsar la formalización y el crecimiento de los emprendedores peruanos mediante un servicio contable transparente, accesible y adaptado a la nueva era digital.",
+    "vision": "Ser el estudio contable referente en el Perú por su cercanía con el emprendedor y su compromiso con la educación financiera y la innovación.",
+    "beneficiosTitulo": "Para qué te sirve formalizarte",
+    "beneficios": [
+      "Licitaciones del Estado",
+      "Patrimonio protegido",
+      "Mercados fuera del país",
+      "Más confianza de tu cliente",
+      "Productos financieros"
+    ]
+  },
+  "contacto": {
+    "eyebrow": "Hablemos",
+    "titulo": "Escríbenos y empezamos hoy",
+    "bajada": "Te respondemos por WhatsApp. Recién ahí decides.",
+    "telefono": "913 926 338",
+    "whatsapp": "51913926338",
+    "mensaje": "Hola SOFICO, quiero constituir mi empresa. Los vi en su página web.",
+    "correo": "informes@estudiosofico.com",
+    "nota": "Atención por WhatsApp",
+    "redes": [
+      {
+        "t": "Facebook",
+        "u": "#"
+      },
+      {
+        "t": "Instagram",
+        "u": "#"
+      },
+      {
+        "t": "TikTok",
+        "u": "#"
+      }
+    ]
+  },
+  "legal": "Empresa privada de asesoría empresarial. No estamos afiliados a SUNAT, SUNARP ni a ninguna entidad gubernamental."
+}

@@ -1,0 +1,13 @@
+{
+  "_nota": "Texto escrito pero que NO aparece en la web, por decisión del cliente. No se expone en el panel de edición. Entra solo si el cliente lo pide.",
+  "otros": [
+    {
+      "titulo": "Asesoría tributaria",
+      "texto": "Tus obligaciones con SUNAT al día, sin sustos ni multas."
+    },
+    {
+      "titulo": "Asesoría contable",
+      "texto": "Los libros de tu empresa en orden desde el primer mes."
+    }
+  ]
+}

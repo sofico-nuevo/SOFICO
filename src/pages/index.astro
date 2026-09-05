@@ -1,0 +1,289 @@
+---
+import '../styles/global.css';
+import home from '../data/home.json';
+import config from '../data/config.json';
+import { ICONOS, TONOS, MAPA } from '../iconos.js';
+
+const C = home;
+const WA = 'https://wa.me/' + C.contacto.whatsapp + '?text=' + encodeURIComponent(C.contacto.mensaje);
+
+/* Devuelve el icono ya armado. Es diseño: el nombre sale de src/iconos.js, no del panel. */
+function ico(nombre, cls = '') {
+  const cuerpo = ICONOS[nombre];
+  if (!cuerpo) return '';
+  const tono = TONOS[nombre] || '#2E6BE0';
+  return `<span class="ico ${cls}" style="--tono:${tono}" aria-hidden="true"><svg viewBox="0 0 256 256">${cuerpo}</svg></span>`;
+}
+const icoDe = (grupo, i, cls) => ico(MAPA[grupo][i], cls);
+const dosDigitos = (i) => String(i + 1).padStart(2, '0');
+
+const tituloPagina = `SOFICO · Constituye tu empresa por S/${C.oferta.precio}, todo incluido`;
+const descripcion = `Estudio contable con más de 8 años formalizando emprendedores peruanos. Constitución de empresa por S/${C.oferta.precio}, todo incluido, en ${C.oferta.plazo}. Empiezas con S/${C.oferta.entrada}.`;
+---
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content={descripcion} />
+<link rel="icon" href="/img/sofico-isotipo-128.png" />
+<title>{tituloPagina}</title>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#inicio">
+      <img src="/img/sofico-isotipo-128.png" alt="" width="128" height="128" />
+      <span style="display:block"><b>SOFICO</b><span>Estudio Contable</span></span>
+    </a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#incluye">Qué incluye</a>
+      <a href="#proceso">Por qué con nosotros</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú de secciones">
+      <svg class="ic-lineas" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      <svg class="ic-x" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg>
+      <span>Menú</span>
+    </button>
+    <a class="btn btn-p hd-cta" href={WA}>WhatsApp</a>
+  </div>
+  <div class="menu-movil" id="menu-movil" hidden>
+    <a href="#inicio">Inicio</a>
+    <a href="#incluye">Qué incluye</a>
+    <a href="#proceso">Por qué con nosotros</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <section class="wrap hero" id="servicio">
+    <div class="hero-g">
+      <div>
+        <p class="eyebrow entra">{C.oferta.eyebrow}</p>
+        <h1 class="entra">{C.oferta.titulo} <em>{C.oferta.tituloDestacado}</em>.</h1>
+        <p class="lead entra">{C.oferta.promesa}</p>
+        <div class="ficha">
+          <div class="ficha-r">
+            <div class="ficha-c">
+              <div class="ficha-k">Inversión total</div>
+              <div class="ficha-v"><small>S/</small>{C.oferta.precio}</div>
+              <div class="ficha-n">Pago único, todo incluido</div>
+            </div>
+            <div class="ficha-c">
+              <div class="ficha-k">Para empezar</div>
+              <div class="ficha-v"><small>S/</small>{C.oferta.entrada}</div>
+              <div class="ficha-n">El resto, al entregarte todo</div>
+            </div>
+          </div>
+          <div class="ficha-pie">Plazo máximo · {C.oferta.plazo}</div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-p" href={WA}>Quiero constituir mi empresa</a>
+          <a class="btn btn-s" href="#incluye">Ver qué incluye</a>
+        </div>
+      </div>
+      <div class="hero-marca"><img src="/img/sofico-isotipo-512.png" alt="Isotipo de SOFICO" width="512" height="512" /></div>
+    </div>
+  </section>
+
+  <section class="estado sec-sm">
+    <div class="wrap">
+      <div class="estado-h">
+        <h2>{C.proceso.titulo}</h2>
+        <span>{C.proceso.bajada}</span>
+      </div>
+      <div class="pistas">
+        {C.proceso.pasos.map((p, i) => (
+          <div class="pista">
+            <div class="punto"></div>
+            <Fragment set:html={icoDe('pasos', i, 'placa ico-pista')} />
+            <div class="pista-dia">{p.dia}</div>
+            <div class="pista-t">{p.titulo}</div>
+            <div class="pista-d">{p.texto}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec claro" id="incluye">
+    <div class="wrap">
+      <p class="eyebrow">{C.incluye.eyebrow}</p>
+      <h2 class="tit">{C.incluye.titulo}</h2>
+      <p class="sub">{C.incluye.bajada}</p>
+      <div class="items">
+        {C.incluye.items.map((t, i) => (
+          <div class="item">
+            <span class="item-n">{dosDigitos(i)}</span>
+            <Fragment set:html={icoDe('incluye', i, 'ico-item')} />
+            <span class="item-t">{t}</span>
+          </div>
+        ))}
+      </div>
+      <div class="bono">
+        <Fragment set:html={ico(MAPA.bono, 'ico-bono')} />
+        <div>
+          <h3>{C.incluye.bonoTitulo}</h3>
+          <p>{C.incluye.bonoTexto}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="proceso">
+    <div class="wrap">
+      <p class="eyebrow">{C.razones.eyebrow}</p>
+      <h2 class="tit">{C.razones.titulo}</h2>
+      <p class="sub">{C.razones.bajada}</p>
+      <div class="rejilla">
+        {C.razones.tarjetas.map((r, i) => (
+          <div class="tarjeta">
+            <Fragment set:html={icoDe('razones', i, 'placa ico-tarjeta')} />
+            <div class="tarjeta-n">{dosDigitos(i)}</div>
+            <h3>{r.titulo}</h3>
+            <p>{r.texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec-sm">
+    <div class="cifras">
+      {C.cifras.map((c, i) => (
+        <div class="cifra">
+          <Fragment set:html={icoDe('cifras', i, 'placa ico-cifra')} />
+          <b>{c.numero}</b><span>{c.texto}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="sec claro" id="nosotros">
+    <div class="wrap">
+      <p class="eyebrow">{C.nosotros.eyebrow}</p>
+      <h2 class="tit">{C.nosotros.titulo}</h2>
+      <p class="sub">{C.nosotros.texto}</p>
+      <div class="dos">
+        <div class="panel"><div class="panel-k">Misión</div><p>{C.nosotros.mision}</p></div>
+        <div class="panel"><div class="panel-k">Visión</div><p>{C.nosotros.vision}</p></div>
+      </div>
+      <p class="eyebrow" style="margin-top:56px">{C.nosotros.beneficiosTitulo}</p>
+      <ul class="benef" style="margin-top:0">
+        {C.nosotros.beneficios.map((b, i) => (
+          <li><Fragment set:html={icoDe('beneficios', i, 'ico-benef')} />{b}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="contacto">
+    <div class="wrap">
+      <p class="eyebrow">{C.contacto.eyebrow}</p>
+      <h2 class="tit">{C.contacto.titulo}</h2>
+      <p class="sub">{C.contacto.bajada}</p>
+      <div class="cont">
+        <div>
+          <div class="dato"><div class="dato-k">WhatsApp y teléfono</div>
+            <div class="dato-v"><a href={WA}>{C.contacto.telefono}</a></div></div>
+          <div class="dato"><div class="dato-k">Correo</div>
+            <div class="dato-v"><a href={`mailto:${C.contacto.correo}`}>{C.contacto.correo}</a></div></div>
+          <div class="dato"><div class="dato-k">Atención</div>
+            <div class="dato-v" style="font-size:15px;color:var(--tinta-2)">{C.contacto.nota}</div></div>
+          <div class="cta-row"><a class="btn btn-p" href={WA}>Escribir por WhatsApp</a></div>
+        </div>
+        <form id="f" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value={config.web3formsKey} />
+          <input type="hidden" name="subject" value="Consulta desde la web de SOFICO" />
+          <input type="hidden" name="from_name" value="Web SOFICO" />
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" />
+          <div class="campos">
+            <div class="campo"><label for="n">Nombres</label><input id="n" name="Nombres" required /></div>
+            <div class="campo"><label for="a">Apellidos</label><input id="a" name="Apellidos" required /></div>
+            <div class="campo"><label for="c">Correo</label><input id="c" name="email" type="email" required /></div>
+            <div class="campo"><label for="t">Teléfono</label><input id="t" name="Teléfono" type="tel" required /></div>
+            <div class="campo ancho"><label for="m">Tu consulta</label><textarea id="m" name="Consulta"></textarea></div>
+          </div>
+          <button class="btn btn-p" type="submit">Enviar consulta</button>
+          <p class="form-nota" id="form-nota">Si prefieres una respuesta hoy mismo, escríbenos por WhatsApp.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pie">
+      <a class="logo" href="#inicio">
+        <img src="/img/sofico-isotipo-128.png" alt="" width="128" height="128" />
+        <span style="display:block"><b>SOFICO</b><span>Estudio Contable</span></span>
+      </a>
+      <div class="pie-redes">
+        {C.contacto.redes.map((r) => <a href={r.u}>{r.t}</a>)}
+      </div>
+    </div>
+    <div class="legal">
+      <p>{C.legal}</p>
+      <p>© {new Date().getFullYear()} SOFICO. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* menú de secciones en celular */
+  (function () {
+    const b = document.getElementById('menu-btn');
+    const m = document.getElementById('menu-movil');
+    if (!b || !m) return;
+    const abrir = (v) => {
+      m.hidden = !v;
+      b.setAttribute('aria-expanded', v ? 'true' : 'false');
+      b.setAttribute('aria-label', v ? 'Cerrar menú de secciones' : 'Abrir menú de secciones');
+    };
+    b.addEventListener('click', () => abrir(m.hidden));
+    m.addEventListener('click', (e) => { if (e.target.closest('a')) abrir(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !m.hidden) { abrir(false); b.focus(); } });
+    addEventListener('resize', () => { if (innerWidth > 1000 && !m.hidden) abrir(false); });
+  })();
+
+  /* formulario: envía al servicio y responde en la misma página */
+  (function () {
+    const f = document.getElementById('f');
+    const nota = document.getElementById('form-nota');
+    if (!f || !nota) return;
+    const original = nota.textContent;
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const boton = f.querySelector('button[type="submit"]');
+      boton.disabled = true;
+      nota.textContent = 'Enviando tu consulta...';
+      try {
+        const r = await fetch(f.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(f),
+        });
+        if (!r.ok) throw new Error('respuesta ' + r.status);
+        f.reset();
+        nota.textContent = 'Recibimos tu consulta. Te respondemos hoy mismo.';
+      } catch (err) {
+        nota.textContent = 'No pudimos enviar tu consulta. Escríbenos por WhatsApp y te respondemos ahí.';
+      } finally {
+        boton.disabled = false;
+        setTimeout(() => { nota.textContent = original; }, 12000);
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

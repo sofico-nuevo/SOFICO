@@ -1,0 +1,106 @@
+# Panel de edición de la web de SOFICO.
+# Solo aparece acá lo que el cliente puede cambiar. El diseño, los colores,
+# la tipografía, la estructura y los iconos NO se editan desde el panel.
+media:
+  input: public/img
+  output: /img
+content:
+  - name: home
+    label: Contenido de la web
+    path: src/data/home.json
+    type: file
+    fields:
+      - name: oferta
+        label: Portada
+        type: object
+        fields:
+          - { name: eyebrow, label: Etiqueta de arriba, type: string }
+          - { name: titulo, label: Titular, type: string }
+          - { name: tituloDestacado, label: Palabra resaltada del titular, type: string }
+          - { name: promesa, label: Frase de apoyo, type: text }
+          - { name: precio, label: Precio total en soles (solo el número), type: string }
+          - { name: entrada, label: Monto para empezar (solo el número), type: string }
+          - { name: plazo, label: Plazo máximo, type: string }
+
+      - name: proceso
+        label: Cómo avanza tu trámite
+        type: object
+        fields:
+          - { name: titulo, label: Título de la sección, type: string }
+          - { name: bajada, label: Frase al costado del título, type: string }
+          - name: pasos
+            label: Los pasos
+            type: object
+            list: true
+            fields:
+              - { name: dia, label: Día, type: string }
+              - { name: titulo, label: Título del paso, type: string }
+              - { name: texto, label: Explicación, type: text }
+
+      - name: incluye
+        label: Qué incluye el precio
+        type: object
+        fields:
+          - { name: eyebrow, label: Etiqueta de arriba, type: string }
+          - { name: titulo, label: Título de la sección, type: string }
+          - { name: bajada, label: Frase debajo del título, type: text }
+          - { name: items, label: La lista de lo que incluye, type: string, list: true }
+          - { name: bonoTitulo, label: Título del bono, type: string }
+          - { name: bonoTexto, label: Texto del bono, type: text }
+
+      - name: razones
+        label: Por qué con nosotros
+        type: object
+        fields:
+          - { name: eyebrow, label: Etiqueta de arriba, type: string }
+          - { name: titulo, label: Título de la sección, type: string }
+          - { name: bajada, label: Frase debajo del título, type: text }
+          - name: tarjetas
+            label: Las cuatro tarjetas
+            type: object
+            list: true
+            fields:
+              - { name: titulo, label: Título, type: string }
+              - { name: texto, label: Explicación, type: text }
+
+      - name: cifras
+        label: Las cifras
+        type: object
+        list: true
+        fields:
+          - { name: numero, label: El número, type: string }
+          - { name: texto, label: Qué mide, type: string }
+
+      - name: nosotros
+        label: Quiénes somos
+        type: object
+        fields:
+          - { name: eyebrow, label: Etiqueta de arriba, type: string }
+          - { name: titulo, label: Título de la sección, type: string }
+          - { name: texto, label: Presentación, type: text }
+          - { name: mision, label: Misión, type: text }
+          - { name: vision, label: Visión, type: text }
+          - { name: beneficiosTitulo, label: Título de la lista de beneficios, type: string }
+          - { name: beneficios, label: Para qué te sirve formalizarte, type: string, list: true }
+
+      - name: contacto
+        label: Contacto
+        type: object
+        fields:
+          - { name: eyebrow, label: Etiqueta de arriba, type: string }
+          - { name: titulo, label: Título de la sección, type: string }
+          - { name: bajada, label: Frase debajo del título, type: text }
+          - { name: telefono, label: Teléfono que se muestra, type: string }
+          - { name: whatsapp, label: WhatsApp en formato internacional (51 y el número), type: string }
+          - { name: mensaje, label: Mensaje con el que se abre el WhatsApp, type: text }
+          - { name: correo, label: Correo, type: string }
+          - { name: nota, label: Nota de atención, type: string }
+          - name: redes
+            label: Redes sociales
+            type: object
+            list: true
+            fields:
+              - { name: t, label: Nombre de la red, type: string }
+              - { name: u, label: Enlace, type: string }
+
+      - { name: legal, label: Texto legal del pie, type: text }
