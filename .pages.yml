@@ -1,9 +1,13 @@
 # Panel de edición de la web de SOFICO.
 # Solo aparece acá lo que el cliente puede cambiar. El diseño, los colores,
 # la tipografía, la estructura y los iconos NO se editan desde el panel.
-media:
-  input: public/img
-  output: /img
+# Sin bloque 'media' a proposito: el cliente no tiene ningun campo de imagen
+# que editar, y con Media visible podia borrar los PNG del logo que usa la
+# plantilla y tumbar la web. Paso el 8/9/2026. Si algun dia se agrega un
+# campo de imagen, hay que devolver este bloque:
+#   media:
+#     input: public/img
+#     output: /img
 content:
   - name: home
     label: Contenido de la web
