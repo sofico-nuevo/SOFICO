@@ -26,6 +26,8 @@ content:
           - { name: precio, label: Precio total en soles (solo el número), type: string }
           - { name: entrada, label: Monto para empezar (solo el número), type: string }
           - { name: plazo, label: Plazo máximo, type: string }
+          - { name: firmaNombre, label: Nombre bajo la foto, type: string }
+          - { name: firmaCargo, label: Cargo bajo la foto, type: string }
 
       - name: proceso
         label: Cómo avanza tu trámite
