@@ -69,21 +69,7 @@ const descripcion = `Estudio contable con más de 8 años formalizando emprended
         <p class="eyebrow entra">{C.oferta.eyebrow}</p>
         <h1 class="entra">{C.oferta.titulo} <em>{C.oferta.tituloDestacado}</em>.</h1>
         <p class="lead entra">{C.oferta.promesa}</p>
-        <div class="ficha">
-          <div class="ficha-r">
-            <div class="ficha-c">
-              <div class="ficha-k">Inversión total</div>
-              <div class="ficha-v"><small>S/</small>{C.oferta.precio}</div>
-              <div class="ficha-n">Pago único, todo incluido</div>
-            </div>
-            <div class="ficha-c">
-              <div class="ficha-k">Para empezar</div>
-              <div class="ficha-v"><small>S/</small>{C.oferta.entrada}</div>
-              <div class="ficha-n">El resto, al entregarte todo</div>
-            </div>
-          </div>
-          <div class="ficha-pie">Plazo máximo · {C.oferta.plazo}</div>
-        </div>
+        <p class="hero-dato entra">Plazo máximo · {C.oferta.plazo}</p>
         <div class="cta-row">
           <a class="btn btn-p" href={WA}>Quiero constituir mi empresa</a>
           <a class="btn btn-s" href="#incluye">Ver qué incluye</a>
@@ -106,7 +92,6 @@ const descripcion = `Estudio contable con más de 8 años formalizando emprended
             <Fragment set:html={icoDe('pasos', i, 'placa ico-pista')} />
             <div class="pista-dia">{p.dia}</div>
             <div class="pista-t">{p.titulo}</div>
-            <div class="pista-d">{p.texto}</div>
           </div>
         ))}
       </div>

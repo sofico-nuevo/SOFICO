@@ -40,7 +40,6 @@ content:
             fields:
               - { name: dia, label: Día, type: string }
               - { name: titulo, label: Título del paso, type: string }
-              - { name: texto, label: Explicación, type: text }
 
       - name: incluye
         label: Qué incluye el precio
@@ -66,7 +65,6 @@ content:
             list: true
             fields:
               - { name: titulo, label: Título, type: string }
-              - { name: texto, label: Explicación, type: text }
 
       - name: cifras
         label: Las cifras

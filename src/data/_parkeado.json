@@ -9,5 +9,27 @@
       "titulo": "Asesoría contable",
       "texto": "Los libros de tu empresa en orden desde el primer mes."
     }
+  ],
+  "pasosTexto": [
+    {
+      "dia": "Día 0",
+      "titulo": "Nos escribes por WhatsApp",
+      "texto": "Resolvemos tus dudas antes de que pagues nada."
+    },
+    {
+      "dia": "Día 1",
+      "titulo": "Definimos tu tipo de empresa",
+      "texto": "SAC, EIRL o SRL, según cómo vas a operar."
+    },
+    {
+      "dia": "Día 2",
+      "titulo": "Inicias con S/100",
+      "texto": "Reservamos tu nombre en SUNARP."
+    },
+    {
+      "dia": "Día 15",
+      "titulo": "Empresa lista para operar",
+      "texto": "Con tu RUC y tu Clave SOL. Ya facturas."
+    }
   ]
 }
