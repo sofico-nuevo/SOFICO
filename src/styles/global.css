@@ -81,17 +81,16 @@ nav a:hover{color:var(--naranja)}
   background:rgba(255,255,255,.02)}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
 
-.hero-foto{position:relative;border-radius:24px;overflow:hidden;padding-top:34px;
-  background:radial-gradient(115% 88% at 50% 0%,#173350 0%,#0D2439 52%,#0A1B2E 100%);
-  border:1px solid rgba(255,255,255,.07);
-  display:flex;align-items:flex-end;justify-content:center}
-.hero-foto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
-  background:linear-gradient(90deg,var(--naranja),rgba(255,138,0,0) 78%);z-index:2}
-.hero-foto img{position:relative;display:block;width:92%;max-width:400px;height:auto;
-  filter:drop-shadow(0 24px 44px rgba(0,0,0,.5))}
+.hero-foto{position:relative;display:flex;justify-content:center;align-items:flex-end}
+.hero-foto::before{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+  width:min(560px,108%);height:90%;
+  background:radial-gradient(56% 50% at 50% 44%,rgba(44,96,180,.50),rgba(10,27,46,0) 70%)}
+.hero-foto img{position:relative;display:block;width:96%;max-width:430px;height:auto;
+  -webkit-mask-image:linear-gradient(180deg,#000 89%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 89%,transparent 100%);
+  filter:drop-shadow(0 26px 48px rgba(0,0,0,.6))}
 @media(max-width:900px){
   .hero-g{grid-template-columns:1fr;gap:36px}
-  .hero-foto{border-radius:20px;padding-top:26px}
   .hero-foto img{width:86%;max-width:330px}
   .hero{padding-top:48px}
 }
