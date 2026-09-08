@@ -15,7 +15,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--marino);color:var(--tinta);
   font-family:Satoshi,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+  font-weight:450;line-height:1.6}
 img{max-width:100%;display:block}
 a{color:inherit}
 h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.02em;font-weight:700}
@@ -27,7 +27,7 @@ ul{margin:0;padding:0;list-style:none}
 .sec{padding-top:104px;padding-bottom:104px}
 .sec-sm{padding-top:64px;padding-bottom:64px}
 
-.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+.eyebrow{font-family:var(--mono);font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
   color:var(--naranja);display:flex;align-items:center;gap:12px;margin:0 0 22px}
 .eyebrow::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(255,138,0,.5),transparent)}
 .claro .eyebrow{color:#C2650B}
@@ -52,10 +52,10 @@ header{position:sticky;top:0;z-index:60;background:rgba(10,27,46,.86);
 .logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
 .logo img{height:32px;width:auto}
 .logo b{font-size:19px;font-weight:700;letter-spacing:.20em;line-height:1}
-.logo span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.22em;
+.logo span{display:block;font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:.22em;
   color:var(--tinta-3);text-transform:uppercase;margin-top:3px}
 nav{margin-left:auto;display:flex;gap:26px}
-nav a{font-size:15.5px;color:var(--tinta-2);text-decoration:none;padding:6px 0}
+nav a{font-size:15.5px;font-weight:500;color:var(--tinta-2);text-decoration:none;padding:6px 0}
 nav a:hover{color:var(--naranja)}
 .hd .btn{min-height:42px;padding:0 18px;font-size:15.5px}
 @media(max-width:980px){nav{display:none}}
@@ -65,9 +65,9 @@ nav a:hover{color:var(--naranja)}
 .hero-g{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center}
 .hero h1{font-size:clamp(2.5rem,5.4vw,4.15rem);font-weight:900}
 .hero h1 em{font-style:normal;color:var(--naranja)}
-.hero .lead{color:var(--tinta-2);font-size:20.5px;max-width:33ch;margin-top:22px}
+.hero .lead{color:var(--tinta-2);font-weight:500;font-size:20.5px;max-width:33ch;margin-top:22px}
 
-.hero-dato{margin-top:18px;font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;
+.hero-dato{margin-top:18px;font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--tinta-3)}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
 
@@ -76,7 +76,7 @@ nav a:hover{color:var(--naranja)}
   margin-top:-4px;padding:14px 26px;border:1px solid var(--linea);border-radius:14px;
   background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015));backdrop-filter:blur(6px)}
 .firma-n{font-weight:800;font-size:19px;letter-spacing:-.01em}
-.firma-r{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-3);margin-top:6px}
+.firma-r{font-family:var(--mono);font-weight:600;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-3);margin-top:6px}
 .hero-foto::before{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);
   width:min(560px,108%);height:90%;
   background:radial-gradient(56% 50% at 50% 44%,rgba(44,96,180,.50),rgba(10,27,46,0) 70%)}
@@ -94,7 +94,7 @@ nav a:hover{color:var(--naranja)}
 .estado{border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);background:rgba(255,255,255,.022)}
 .estado-h{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:34px}
 .estado-h h2{font-size:23px}
-.estado-h span{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-3)}
+.estado-h span{font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-3)}
 .pistas{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
 .pista{position:relative;padding:0 22px 0 0}
 .pista::before{content:"";position:absolute;left:0;top:7px;right:0;height:2px;
@@ -123,7 +123,7 @@ nav a:hover{color:var(--naranja)}
 .claro{background:var(--papel);color:var(--papel-tinta)}
 .claro h2,.claro h3{color:var(--papel-tinta)}
 .tit{font-size:clamp(1.85rem,3.4vw,2.6rem);font-weight:900;max-width:20ch}
-.sub{color:var(--tinta-2);margin-top:16px;font-size:18.5px;max-width:52ch}
+.sub{color:var(--tinta-2);font-weight:500;margin-top:16px;font-size:18.5px;max-width:52ch}
 .claro .sub{color:#4A5D74}
 
 .items{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:44px;
@@ -131,7 +131,7 @@ nav a:hover{color:var(--naranja)}
 .item{display:flex;gap:16px;padding:20px 26px 20px 0;border-bottom:1px solid rgba(22,40,63,.13)}
 .item:nth-child(odd){border-right:1px solid rgba(22,40,63,.13);padding-right:34px}
 .item:nth-child(even){padding-left:34px}
-.item-n{font-family:var(--mono);font-size:16px;color:#C2650B;padding-top:11px;flex-shrink:0;letter-spacing:.08em}
+.item-n{font-family:var(--mono);font-weight:600;font-size:16px;color:#C2650B;padding-top:11px;flex-shrink:0;letter-spacing:.08em}
 .item-t{font-size:17.5px;font-weight:500;line-height:1.45}
 @media(max-width:760px){
   .items{grid-template-columns:1fr}
@@ -147,7 +147,7 @@ nav a:hover{color:var(--naranja)}
 .tarjeta{border:1px solid var(--linea);border-radius:var(--r);padding:26px 24px;
   background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
 .tarjeta h3{font-size:22px;letter-spacing:-.015em}
-.tarjeta p{color:var(--tinta-2);font-size:18px;line-height:1.5;margin-top:10px}
+.tarjeta p{color:var(--tinta-2);font-weight:500;font-size:18px;line-height:1.5;margin-top:10px}
 .tarjeta-n{font-family:var(--mono);font-size:36px;font-weight:500;color:var(--naranja);letter-spacing:.04em;margin-bottom:10px;line-height:1.05}
 @media(max-width:900px){.rejilla{grid-template-columns:1fr 1fr}}
 @media(max-width:540px){.rejilla{grid-template-columns:1fr}}
@@ -159,25 +159,25 @@ nav a:hover{color:var(--naranja)}
 .cifra+.cifra{border-left:1px solid var(--linea)}
 .cifra b{display:block;font-size:clamp(2.1rem,4.4vw,3rem);font-weight:900;letter-spacing:-.03em;
   color:var(--naranja);line-height:1}
-.cifra span{display:block;color:var(--tinta-3);font-size:17px;margin-top:12px}
+.cifra span{display:block;color:var(--tinta-3);font-weight:500;font-size:17px;margin-top:12px}
 @media(max-width:700px){.cifras{grid-template-columns:1fr}
   .cifra+.cifra{border-left:0;border-top:1px solid var(--linea)}}
 
 /* ---------- nosotros ---------- */
 .dos{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
 .panel{border:1px solid rgba(22,40,63,.14);border-radius:var(--r);padding:28px;background:#fff}
-.panel-k{font-family:var(--mono);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:#C2650B}
+.panel-k{font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:#C2650B}
 .panel p{margin-top:12px;font-size:17px;color:#3E5069}
 .panel p{color:#3E5069}
 .benef{margin-top:44px;display:flex;flex-wrap:wrap;gap:10px}
-.benef li{border:1px solid rgba(22,40,63,.16);border-radius:999px;padding:9px 18px;font-size:16px}
+.benef li{border:1px solid rgba(22,40,63,.16);border-radius:999px;padding:9px 18px;font-size:16px;font-weight:500}
 @media(max-width:760px){.dos{grid-template-columns:1fr}}
 
 /* ---------- contacto ---------- */
 .cont{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;margin-top:44px;align-items:start}
 .dato{border-bottom:1px solid var(--linea);padding:16px 0}
 .dato:first-child{border-top:1px solid var(--linea)}
-.dato-k{font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta-3)}
+.dato-k{font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta-3)}
 .dato-v{font-size:18px;font-weight:500;margin-top:5px}
 .dato-v a{text-decoration:none}
 .dato-v a:hover{color:var(--naranja)}
@@ -186,13 +186,13 @@ form{border:1px solid var(--linea);border-radius:var(--r);padding:30px;
 .campos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .campo{display:flex;flex-direction:column;gap:7px}
 .campo.ancho{grid-column:1/-1}
-label{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-3)}
+label{font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-3)}
 input,textarea{font-family:inherit;font-size:16px;color:var(--tinta);background:rgba(0,0,0,.24);
   border:1px solid var(--linea);border-radius:9px;padding:13px 14px;min-height:48px;width:100%}
 textarea{min-height:104px;resize:vertical}
 input:focus,textarea:focus{outline:0;border-color:var(--naranja)}
 form .btn{width:100%;margin-top:20px}
-.form-nota{font-size:14.5px;color:var(--tinta-3);margin-top:14px;text-align:center}
+.form-nota{font-size:14.5px;font-weight:500;color:var(--tinta-3);margin-top:14px;text-align:center}
 @media(max-width:860px){.cont{grid-template-columns:1fr;gap:36px}}
 @media(max-width:540px){.campos{grid-template-columns:1fr}}
 
@@ -201,11 +201,11 @@ footer{border-top:1px solid var(--linea);background:#07131F}
 .pie{display:flex;justify-content:space-between;align-items:flex-start;gap:36px;flex-wrap:wrap;
   padding-top:52px;padding-bottom:26px}
 .pie-redes{display:flex;gap:18px}
-.pie-redes a{font-size:15.5px;color:var(--tinta-2);text-decoration:none}
+.pie-redes a{font-size:15.5px;font-weight:500;color:var(--tinta-2);text-decoration:none}
 .pie-redes a:hover{color:var(--naranja)}
 .legal{border-top:1px solid var(--linea);padding-top:22px;padding-bottom:34px;
   display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
-  font-size:14px;color:var(--tinta-3);line-height:1.55}
+  font-size:14px;font-weight:500;color:var(--tinta-3);line-height:1.55}
 .legal p{max-width:62ch}
 
 
