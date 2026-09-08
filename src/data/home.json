@@ -1,9 +1,9 @@
 {
   "oferta": {
     "eyebrow": "Constitución de empresas",
-    "titulo": "Constituye tu empresa de forma rápida Todo incluido por",
+    "titulo": "Constituye tu empresa de forma rápida y segura Todo incluido por",
     "tituloDestacado": "S/600",
-    "promesa": "EMPIEZA CON SOLO S/ 100",
+    "promesa": "INICIA CON SOLO S/ 100",
     "precio": "600",
     "entrada": "100",
     "plazo": "15 días hábiles",
@@ -55,11 +55,11 @@
     "tarjetas": [
       {
         "titulo": "Todo incluido",
-        "texto": "El precio que ves es el que pagas."
+        "texto": "(Sin costos ocultos)"
       },
       {
         "titulo": "Te acompañamos",
-        "texto": "Una persona lleva tu caso. No un formulario."
+        "texto": "Asesoría personalizada"
       },
       {
         "titulo": "Rápido y seguro",
