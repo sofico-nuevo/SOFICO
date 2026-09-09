@@ -24,6 +24,10 @@ const descripcion = `Estudio contable con más de 8 años formalizando emprended
    La direccion sale de `site` en astro.config.mjs: tiene que ser absoluta. */
 const urlSitio = Astro.site ? Astro.site.href.replace(/\/$/, '') : '';
 const ogImagen = urlSitio + '/img/sofico-og.jpg';
+
+/* Redes: solo se muestran las que tienen un enlace de verdad. Una red sin
+   direccion manda al visitante a ninguna parte y resta confianza. */
+const redes = (C.contacto.redes || []).filter((r) => r.u && r.u.trim() !== '' && r.u.trim() !== '#');
 ---
 
 <!doctype html>
@@ -233,11 +237,13 @@ const ogImagen = urlSitio + '/img/sofico-og.jpg';
     <div class="pie">
       <a class="logo" href="#inicio">
         <img src="/img/sofico-isotipo-128.png" alt="" width="128" height="128" />
-        <span style="display:block"><b>SOFICO</b><span>Estudio Contable</span></span>
+        <span style="display:block"><b>SOFICO</b></span>
       </a>
-      <div class="pie-redes">
-        {C.contacto.redes.map((r) => <a href={r.u}>{r.t}</a>)}
-      </div>
+      {redes.length > 0 && (
+        <div class="pie-redes">
+          {redes.map((r) => <a href={r.u} target="_blank" rel="noopener">{r.t}</a>)}
+        </div>
+      )}
     </div>
     <div class="legal">
       <p>{C.legal}</p>

@@ -31,5 +31,19 @@
       "titulo": "Empresa lista para operar",
       "texto": "Con tu RUC y tu Clave SOL. Ya facturas."
     }
+  ],
+  "redesSinEnlace": [
+    {
+      "t": "Facebook",
+      "u": "#"
+    },
+    {
+      "t": "Instagram",
+      "u": "#"
+    },
+    {
+      "t": "TikTok",
+      "u": "#"
+    }
   ]
 }

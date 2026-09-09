@@ -109,20 +109,7 @@
     "mensaje": "Hola SOFICO, quiero constituir mi empresa. Los vi en su página web.",
     "correo": "informes@estudiosofico.com",
     "nota": "Atención por WhatsApp, de lunes a sábado",
-    "redes": [
-      {
-        "t": "Facebook",
-        "u": "#"
-      },
-      {
-        "t": "Instagram",
-        "u": "#"
-      },
-      {
-        "t": "TikTok",
-        "u": "#"
-      }
-    ]
+    "redes": []
   },
   "legal": "Empresa privada de asesoría empresarial. No estamos afiliados a SUNAT, SUNARP ni a ninguna entidad gubernamental."
 }
