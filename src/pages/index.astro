@@ -19,6 +19,11 @@ const dosDigitos = (i) => String(i + 1).padStart(2, '0');
 
 const tituloPagina = `SOFICO · Constituye tu empresa por S/${C.oferta.precio}, todo incluido`;
 const descripcion = `Estudio contable con más de 8 años formalizando emprendedores peruanos. Constitución de empresa por S/${C.oferta.precio}, todo incluido, en ${C.oferta.plazo}. Empiezas con S/${C.oferta.entrada}.`;
+
+/* Tarjeta que ven WhatsApp, LinkedIn y Facebook al compartir el enlace.
+   La direccion sale de `site` en astro.config.mjs: tiene que ser absoluta. */
+const urlSitio = Astro.site ? Astro.site.href.replace(/\/$/, '') : '';
+const ogImagen = urlSitio + '/img/sofico-og.jpg';
 ---
 
 <!doctype html>
@@ -28,6 +33,19 @@ const descripcion = `Estudio contable con más de 8 años formalizando emprended
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content={descripcion} />
 <link rel="icon" href="/img/sofico-isotipo-128.png" />
+<link rel="canonical" href={urlSitio} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SOFICO" />
+<meta property="og:locale" content="es_PE" />
+<meta property="og:url" content={urlSitio} />
+<meta property="og:title" content={tituloPagina} />
+<meta property="og:description" content={descripcion} />
+<meta property="og:image" content={ogImagen} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="David Vargas, especialista en constitución de empresas de SOFICO" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content={ogImagen} />
 <title>{tituloPagina}</title>
 </head>
 <body>
