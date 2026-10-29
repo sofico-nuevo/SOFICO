@@ -51,6 +51,15 @@ const redes = (C.contacto.redes || []).filter((r) => r.u && r.u.trim() !== '' &&
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content={ogImagen} />
 <title>{tituloPagina}</title>
+
+<!-- Google tag (gtag.js) - Google Ads AW-17916448189 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17916448189"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17916448189');
+</script>
 </head>
 <body>
 
@@ -295,6 +304,30 @@ const redes = (C.contacto.redes || []).filter((r) => r.u && r.u.trim() !== '' &&
         boton.disabled = false;
         setTimeout(() => { nota.textContent = original; }, 12000);
       }
+    });
+  })();
+
+  /* Conversion Google Ads (AW-17916448189): clic en los botones de WhatsApp.
+     Selecciona por href, asi cubre la cabecera y el bloque de contacto sin tocar cada boton. */
+  (function () {
+    var enlaces = document.querySelectorAll('a[href^="https://wa.me/"]');
+    if (!enlaces.length) return;
+    enlaces.forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        if (typeof gtag !== 'function') return;
+        var destino = a.href;
+        var nuevaPestana = a.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey;
+        var listo = false;
+        var ir = function () { if (!listo) { listo = true; window.location.href = destino; } };
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17916448189/VzlSCM31yawcEL2bnd9C',
+          'event_callback': nuevaPestana ? undefined : ir
+        });
+        if (!nuevaPestana) {
+          e.preventDefault();
+          setTimeout(ir, 900);
+        }
+      });
     });
   })();
 </script>
